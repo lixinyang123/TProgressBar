@@ -1,9 +1,9 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\lixin\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\lixin\\.nuget\\packages",
-      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      "/home/lllxy/.dotnet/store/|arch|/|tfm|",
+      "/home/lllxy/.nuget/packages",
+      "/home/lllxy/Program/dotnet-sdk-2.1.700-linux-x64/sdk/NuGetFallbackFolder"
     ]
   }
 }

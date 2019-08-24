@@ -32,15 +32,17 @@ namespace ConsoleProgressTest
         //进度条宽度
         private int progressWidth;
 
+        //进度条显示类型
         private ProgressType progressType;
 
         //最大值默认为100
         //如果进度打到最大值提示 'done'
-        public ProgressBar(int max=100,int width=40,ProgressType type=ProgressType.Character)
+        public ProgressBar(int max=100,ProgressType type=ProgressType.Character)
         {
             maxValue = max;
-            progressWidth = width;
             progressType = type;
+            //进度条宽度自适应
+            progressWidth = Console.WindowWidth/2;
             InitProgressBar();
         }
 

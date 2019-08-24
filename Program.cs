@@ -23,7 +23,7 @@ namespace ConsoleProgressTest
 
                 Console.WriteLine("彩色进度条");
 
-                ProgressBar progressBar2 = new ProgressBar(100,40,ProgressType.Multicolor);
+                ProgressBar progressBar2 = new ProgressBar(100,ProgressType.Multicolor);
 
                 for(var j=0;j<=100;j++)
                 {
