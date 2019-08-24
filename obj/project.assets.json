@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\lixin\\InProgress\\TProgressBar\\ConsoleProgressTest.csproj",
+      "projectUniqueName": "D:\\lixin\\Repositories\\Github\\TProgressBar\\ConsoleProgressTest.csproj",
       "projectName": "ConsoleProgressTest",
-      "projectPath": "D:\\lixin\\InProgress\\TProgressBar\\ConsoleProgressTest.csproj",
+      "projectPath": "D:\\lixin\\Repositories\\Github\\TProgressBar\\ConsoleProgressTest.csproj",
       "packagesPath": "C:\\Users\\lixin\\.nuget\\packages\\",
-      "outputPath": "D:\\lixin\\InProgress\\TProgressBar\\obj\\",
+      "outputPath": "D:\\lixin\\Repositories\\Github\\TProgressBar\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
