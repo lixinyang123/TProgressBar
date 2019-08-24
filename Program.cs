@@ -7,8 +7,6 @@ namespace ConsoleProgressTest
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("第一轮测试开始");
-
             for(var i=0;i<20;i++)
             {
                 Console.WriteLine($"第{i+1}次测试");
