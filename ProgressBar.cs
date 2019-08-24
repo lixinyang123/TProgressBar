@@ -2,6 +2,15 @@ using System;
 
 namespace ConsoleProgressTest
 {
+    //进度条样式
+    public enum ProgressType
+    {
+        //字符样式
+        Character,
+        //彩色样式
+        Multicolor
+    }
+
     //光标所在位置
     internal struct Position
     {
@@ -23,12 +32,15 @@ namespace ConsoleProgressTest
         //进度条宽度
         private int progressWidth;
 
+        private ProgressType progressType;
+
         //最大值默认为100
         //如果进度打到最大值提示 'done'
-        public ProgressBar(int max=100,int width=40)
+        public ProgressBar(int max=100,int width=40,ProgressType type=ProgressType.Character)
         {
             maxValue = max;
             progressWidth = width;
+            progressType = type;
             InitProgressBar();
         }
 
@@ -63,11 +75,21 @@ namespace ConsoleProgressTest
             progressTop = Console.CursorTop;
 
             //绘制进度条
-            Console.SetCursorPosition(0,progressTop);
-            Console.Write('[');
-            Console.Write(new string(' ',progressWidth));
-            Console.Write(']');
-
+            if(progressType == ProgressType.Multicolor)
+            {
+                Console.SetCursorPosition(0,progressTop);
+                Console.BackgroundColor = ConsoleColor.DarkCyan;
+                Console.Write(new string(' ',progressWidth));
+                Console.BackgroundColor = ConsoleColor.Black;
+            }
+            else
+            { 
+                Console.SetCursorPosition(0,progressTop);
+                Console.Write('[');
+                Console.Write(new string(' ',progressWidth));
+                Console.Write(']');
+            }
+            
             //恢复光标位置
             ResetCursorPosition();
         }
@@ -79,11 +101,21 @@ namespace ConsoleProgressTest
 
             if(value<maxValue)
             {
-                Console.SetCursorPosition(1,progressTop);
-
-                //计算显示的 #数量
+                //计算显示的进度的字符数量
                 int num = Convert.ToInt32((double)value/maxValue*progressWidth);
-                Console.Write(new string('#',num));
+
+                if(progressType == ProgressType.Multicolor)
+                {
+                    Console.SetCursorPosition(0,progressTop);
+                    Console.BackgroundColor = ConsoleColor.Yellow;
+                    Console.Write(new string(' ',num));
+                    Console.BackgroundColor = ConsoleColor.Black;
+                }
+                else
+                {
+                    Console.SetCursorPosition(1,progressTop);
+                    Console.Write(new string('#',num));
+                }
 
                 //显示百分比数值
                 Console.ForegroundColor = ConsoleColor.Green;

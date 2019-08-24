@@ -9,3 +9,14 @@ d:\lixin\InProgress\ConsoleProgressTest\obj\Debug\netcoreapp2.1\ConsoleProgressT
 d:\lixin\InProgress\ConsoleProgressTest\obj\Debug\netcoreapp2.1\ConsoleProgressTest.AssemblyInfo.cs
 d:\lixin\InProgress\ConsoleProgressTest\obj\Debug\netcoreapp2.1\ConsoleProgressTest.dll
 d:\lixin\InProgress\ConsoleProgressTest\obj\Debug\netcoreapp2.1\ConsoleProgressTest.pdb
+D:\lixin\InProgress\TProgressBar\bin\Debug\netcoreapp2.1\ConsoleProgressTest.deps.json
+D:\lixin\InProgress\TProgressBar\bin\Debug\netcoreapp2.1\ConsoleProgressTest.runtimeconfig.json
+D:\lixin\InProgress\TProgressBar\bin\Debug\netcoreapp2.1\ConsoleProgressTest.runtimeconfig.dev.json
+d:\lixin\InProgress\TProgressBar\bin\Debug\netcoreapp2.1\ConsoleProgressTest.dll
+d:\lixin\InProgress\TProgressBar\bin\Debug\netcoreapp2.1\ConsoleProgressTest.pdb
+d:\lixin\InProgress\TProgressBar\obj\Debug\netcoreapp2.1\ConsoleProgressTest.csprojAssemblyReference.cache
+d:\lixin\InProgress\TProgressBar\obj\Debug\netcoreapp2.1\ConsoleProgressTest.csproj.CoreCompileInputs.cache
+d:\lixin\InProgress\TProgressBar\obj\Debug\netcoreapp2.1\ConsoleProgressTest.AssemblyInfoInputs.cache
+d:\lixin\InProgress\TProgressBar\obj\Debug\netcoreapp2.1\ConsoleProgressTest.AssemblyInfo.cs
+d:\lixin\InProgress\TProgressBar\obj\Debug\netcoreapp2.1\ConsoleProgressTest.dll
+d:\lixin\InProgress\TProgressBar\obj\Debug\netcoreapp2.1\ConsoleProgressTest.pdb
