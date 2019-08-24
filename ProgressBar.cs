@@ -9,7 +9,6 @@ namespace ConsoleProgressTest
         public int top;
     }
 
-
     public class ProgressBar
     {
         //加载进度条前光标所在位置
@@ -21,11 +20,15 @@ namespace ConsoleProgressTest
         //进度条最大值
         private int maxValue;
 
+        //进度条宽度
+        private int progressWidth;
+
         //最大值默认为100
         //如果进度打到最大值提示 'done'
-        public ProgressBar(int max=100)
+        public ProgressBar(int max=100,int width=40)
         {
             maxValue = max;
+            progressWidth = width;
             InitProgressBar();
         }
 
@@ -43,20 +46,18 @@ namespace ConsoleProgressTest
         {
             GetCursorPosition();
 
+            //设定进度条所在行
             if(lastCursorPosition.top<Console.WindowHeight-1)
             {
-                //设定进度条所在行
                 Console.SetCursorPosition(0,Console.WindowHeight-1);
-                //清空进度条区域
-                Console.Write(new string(' ',Console.WindowWidth-1));
             }
             else
             {
-                //设定进度条所在行
                 Console.SetCursorPosition(0,lastCursorPosition.top);
-                //清空进度条区域
-                Console.WriteLine(new string(' ',Console.WindowWidth-1));
             }
+
+            //清空进度条区域
+            Console.Write(new string(' ',Console.WindowWidth-1));
 
             //记录进度条所在行，用于绘制进度时使用
             progressTop = Console.CursorTop;
@@ -64,7 +65,7 @@ namespace ConsoleProgressTest
             //绘制进度条
             Console.SetCursorPosition(0,progressTop);
             Console.Write('[');
-            Console.Write(new string(' ',40));
+            Console.Write(new string(' ',progressWidth));
             Console.Write(']');
 
             //恢复光标位置
@@ -81,12 +82,12 @@ namespace ConsoleProgressTest
                 Console.SetCursorPosition(1,progressTop);
 
                 //计算显示的 #数量
-                int num = Convert.ToInt32((double)value/maxValue*40);
+                int num = Convert.ToInt32((double)value/maxValue*progressWidth);
                 Console.Write(new string('#',num));
 
                 //显示百分比数值
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.SetCursorPosition(42,progressTop);
+                Console.SetCursorPosition(progressWidth+2,progressTop);
                 Console.Write(Convert.ToInt32((double)value/maxValue*100)+"%");
                 Console.ForegroundColor = ConsoleColor.White;
 
